@@ -1,17 +1,19 @@
-export function getEnv(domain) {
-    const host = location.host;
+export default function getEnv(domain) {
+    const {
+        location: { host }
+    } = window;
 
-    let env = 'prod';
+    let env = "prod";
 
     if (host.includes(`dev.${domain}`)) {
-        env = 'dev';
+        env = "dev";
     }
     if (host.includes(`test.${domain}`)) {
-        env = 'test'
+        env = "test";
     }
     if (host.includes(`pre.${domain}`)) {
-        env = 'pre';
-    },
+        env = "pre";
+    }
 
     return env;
 }

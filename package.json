@@ -9,21 +9,18 @@
     "main": "dist/current-env.js",
     "scripts": {
         "build": "webpack",
-        // "precommit": "lint-staged"
+        "precommit": "lint-staged"
     },
     "husky": {
         "hooks": {
             "pre-commit": "eslint \"src/*.js\""
         }
     },
-    // "lint-staged": {
-    //     "linters": {
-    //         "src/*.js": [
-    //             "./node_modules/.bin/eslint --fix",
-    //             "git add"
-    //         ]
-    //     }
-    // },
+    "lint-staged": {
+        "linters": {
+            "src/*.js": "eslint"
+        }
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/thjiang/current-env"
