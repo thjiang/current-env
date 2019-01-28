@@ -1,6 +1,6 @@
 {
     "name": "current-env",
-    "version": "0.0.3",
+    "version": "1.0.2",
     "author": "thjiang<browserify@qq.com> (https://www.thjiang.com)",
     "description": "A library to get the current environment",
     "keywords": [
