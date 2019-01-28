@@ -1,11 +1,37 @@
 {
     "name": "current-env",
-    "version": "0.0.2",
-    "description": "current-env",
+    "version": "0.0.3",
+    "author": "thjiang<browserify@qq.com> (https://www.thjiang.com)",
+    "description": "A library to get the current environment",
+    "keywords": [
+        "environment"
+    ],
     "main": "dist/current-env.js",
     "scripts": {
-        "build": "webpack"
+        "build": "webpack",
+        // "precommit": "lint-staged"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "eslint \"src/*.js\""
+        }
+    },
+    // "lint-staged": {
+    //     "linters": {
+    //         "src/*.js": [
+    //             "./node_modules/.bin/eslint --fix",
+    //             "git add"
+    //         ]
+    //     }
+    // },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/thjiang/current-env"
+    },
+    "bugs": {
+        "url": "https://github.com/thjiang/current-env/issues"
+    },
+    "license": "MIT",
     "dependencies": {},
     "devDependencies": {
         "@babel/core": "^7.1.6",
@@ -14,10 +40,12 @@
         "@babel/polyfill": "^7.0.0",
         "@babel/preset-env": "^7.1.6",
         "babel-loader": "^8.0.5",
-        "eslint": "^5.9.0",
+        "eslint": "^5.12.1",
         "eslint-config-airbnb": "^17.1.0",
         "eslint-plugin-html": "^4.0.5",
         "eslint-plugin-import": "^2.14.0",
-        "eslint-plugin-jsx-a11y": "^6.2.0"
+        "eslint-plugin-jsx-a11y": "^6.2.0",
+        "husky": "^1.3.1",
+        "lint-staged": "^8.1.0"
     }
 }

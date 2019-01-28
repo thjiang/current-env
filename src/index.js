@@ -7,11 +7,11 @@ export function getEnv(domain) {
         env = 'dev';
     }
     if (host.includes(`test.${domain}`)) {
-        env = 'test';
+        env = 'test'
     }
     if (host.includes(`pre.${domain}`)) {
         env = 'pre';
-    }
+    },
 
     return env;
 }

@@ -38,7 +38,7 @@ require(["currentEnv"], function(currentEnv) {
 ```html
 <!DOCTYPE html>
 <html>
-    <script src="https://unpkg.com/current-env"></script>
+    <script src="https://unpkg.com/current-env/dist/current-env.js"></script>
     <script>
         window.currentEnv.getEnv("domain");
     </script>
